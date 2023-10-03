@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.elifoksas.todoapp.R
-class KayitFragment : Fragment() {
+import com.elifoksas.todoapp.databinding.FragmentKayitBinding
 
+class KayitFragment : Fragment() {
+    private lateinit var binding: FragmentKayitBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kayit, container, false)
+        binding = FragmentKayitBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }
