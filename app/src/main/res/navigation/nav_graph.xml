@@ -21,7 +21,11 @@
         android:id="@+id/detayFragment"
         android:name="com.elifoksas.todoapp.ui.fragment.DetayFragment"
         android:label="fragment_detay"
-        tools:layout="@layout/fragment_detay" />
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="gorev"
+            app:argType="com.elifoksas.todoapp.data.entity.Gorevler" />
+    </fragment>
     <fragment
         android:id="@+id/kayitFragment"
         android:name="com.elifoksas.todoapp.ui.fragment.KayitFragment"
