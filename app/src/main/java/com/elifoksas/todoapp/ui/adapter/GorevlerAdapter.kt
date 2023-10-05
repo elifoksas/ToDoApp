@@ -8,10 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.data.entity.Gorevler
 import com.elifoksas.todoapp.databinding.ItemTasarimBinding
+import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.utils.gecis
 
 class GorevlerAdapter (private val mContext:Context,
-                       private val gorevlerListesi:List<Gorevler>) : RecyclerView.Adapter<GorevlerAdapter.TasarimTutucu>(){
+                       private val gorevlerListesi:List<Gorevler>, var viewModel: AnasayfaViewModel) : RecyclerView.Adapter<GorevlerAdapter.TasarimTutucu>(){
 
     inner class TasarimTutucu(val binding: ItemTasarimBinding) :
         RecyclerView.ViewHolder(binding.root) {

@@ -29,4 +29,16 @@ class KayitFragment : Fragment() {
         viewModel = tempViewModel
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.buttonKaydet.setOnClickListener {
+            val gorev_ad = binding.editTextGorev.text.toString()
+            kaydet(gorev_ad)
+        }
+    }
+    fun kaydet(gorev_ad:String){
+        viewModel.kaydet(gorev_ad)
+    }
+
 }
