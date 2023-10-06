@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.databinding.FragmentKayitBinding
-import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
-import com.elifoksas.todoapp.ui.viewmodel.KayıtViewModel
+import com.elifoksas.todoapp.ui.viewmodel.KayitViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class KayitFragment : Fragment() {
     private lateinit var binding: FragmentKayitBinding
-    private lateinit var viewModel: KayıtViewModel
+    private lateinit var viewModel: KayitViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,7 +25,7 @@ class KayitFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val tempViewModel : KayıtViewModel by viewModels()
+        val tempViewModel : KayitViewModel by viewModels()
         viewModel = tempViewModel
     }
 

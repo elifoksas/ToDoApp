@@ -12,7 +12,9 @@ import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.databinding.FragmentDetayBinding
 import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.ui.viewmodel.DetayViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetayFragment : Fragment() {
 
     private lateinit var binding: FragmentDetayBinding

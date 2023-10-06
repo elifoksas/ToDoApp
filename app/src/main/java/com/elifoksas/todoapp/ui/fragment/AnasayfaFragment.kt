@@ -15,7 +15,9 @@ import com.elifoksas.todoapp.databinding.FragmentAnasayfaBinding
 import com.elifoksas.todoapp.ui.adapter.GorevlerAdapter
 import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.utils.gecis
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AnasayfaFragment : Fragment() {
 
     private lateinit var binding: FragmentAnasayfaBinding
@@ -45,10 +47,10 @@ class AnasayfaFragment : Fragment() {
             binding.recyclerView.adapter = gorevlerAdapter
         }
 
-
         binding.floatingActionButton.setOnClickListener {
             Navigation.gecis(it,R.id.kayitFragmentGecis)
         }
+
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String): Boolean {

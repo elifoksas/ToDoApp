@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.data.entity.Gorevler
 import com.elifoksas.todoapp.databinding.ItemTasarimBinding
+import com.elifoksas.todoapp.ui.fragment.AnasayfaFragmentDirections
 import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.utils.gecis
 
@@ -33,9 +34,12 @@ class GorevlerAdapter (private val mContext:Context,
         binding.textViewGorev.text = gorev.gorev_ad
 
         binding.cardViewGorev.setOnClickListener {
-            Navigation.gecis(it, R.id.detayFragmentGecis)
+            val gecis = AnasayfaFragmentDirections.detayFragmentGecis(gorev= gorev)
+            Navigation.gecis(it,gecis)
         }
+    }
 
-
+    fun sil(gorev_id:Int){
+        viewModel.sil(gorev_id)
     }
 }
