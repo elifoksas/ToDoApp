@@ -22,6 +22,7 @@ class AnasayfaViewModel @Inject constructor(var grepo : GorevlerRepository) : Vi
     fun sil(gorev_id:Int){
         CoroutineScope(Dispatchers.Main).launch {
             grepo.sil(gorev_id)
+            gorevleriYukle()
         }
     }
 

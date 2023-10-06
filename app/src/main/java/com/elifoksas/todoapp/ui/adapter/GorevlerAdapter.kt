@@ -11,6 +11,7 @@ import com.elifoksas.todoapp.databinding.ItemTasarimBinding
 import com.elifoksas.todoapp.ui.fragment.AnasayfaFragmentDirections
 import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.utils.gecis
+import com.google.android.material.snackbar.Snackbar
 
 class GorevlerAdapter (private val mContext:Context,
                        private val gorevlerListesi:List<Gorevler>, var viewModel: AnasayfaViewModel) : RecyclerView.Adapter<GorevlerAdapter.TasarimTutucu>(){
@@ -36,6 +37,12 @@ class GorevlerAdapter (private val mContext:Context,
         binding.cardViewGorev.setOnClickListener {
             val gecis = AnasayfaFragmentDirections.detayFragmentGecis(gorev= gorev)
             Navigation.gecis(it,gecis)
+        }
+
+        binding.imageViewSil.setOnClickListener {
+            Snackbar.make(it,"Görev silinsin mi?",Snackbar.LENGTH_SHORT).setAction("Evet"){
+                sil(gorev.gorev_id)
+            }.show()
         }
     }
 
