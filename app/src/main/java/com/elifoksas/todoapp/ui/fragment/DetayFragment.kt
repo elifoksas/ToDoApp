@@ -7,11 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.databinding.FragmentDetayBinding
 import com.elifoksas.todoapp.ui.viewmodel.AnasayfaViewModel
 import com.elifoksas.todoapp.ui.viewmodel.DetayViewModel
+import com.elifoksas.todoapp.utils.gecis
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,6 +41,8 @@ class DetayFragment : Fragment() {
         binding.buttonGuncelle.setOnClickListener {
             val gorev_ad = binding.editTextGorev.text.toString()
             guncelle(gelenGorev.gorev_id,gorev_ad)
+
+            Navigation.gecis(it,R.id.anasayfaGecisFromDetay)
         }
     }
 

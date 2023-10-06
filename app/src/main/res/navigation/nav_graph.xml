@@ -25,10 +25,17 @@
         <argument
             android:name="gorev"
             app:argType="com.elifoksas.todoapp.data.entity.Gorevler" />
+        <action
+            android:id="@+id/anasayfaGecisFromDetay"
+            app:destination="@id/anasayfaFragment" />
     </fragment>
     <fragment
         android:id="@+id/kayitFragment"
         android:name="com.elifoksas.todoapp.ui.fragment.KayitFragment"
         android:label="fragment_kayit"
-        tools:layout="@layout/fragment_kayit" />
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/anasayfaGecisFromKayit"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
 </navigation>

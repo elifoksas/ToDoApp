@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
+import com.elifoksas.todoapp.R
 import com.elifoksas.todoapp.databinding.FragmentKayitBinding
 import com.elifoksas.todoapp.ui.viewmodel.KayitViewModel
+import com.elifoksas.todoapp.utils.gecis
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,6 +38,8 @@ class KayitFragment : Fragment() {
         binding.buttonKaydet.setOnClickListener {
             val gorev_ad = binding.editTextGorev.text.toString()
             kaydet(gorev_ad)
+
+            Navigation.gecis(it, R.id.anasayfaGecisFromKayit)
         }
     }
     fun kaydet(gorev_ad:String){
