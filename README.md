@@ -9,3 +9,13 @@ Bu projeyi, TechCareer Android Bootcamp programının bir parçası olarak tamam
 - **Dagger Hilt (Dependency Injection)**: Bağımlılık enjeksiyonu için Dagger Hilt kullanarak uygulama içi bağımlılıklar yönetildi.
 - **Room**: SQLite veritabanını kullanarak yerel verileri yönetmek için Room kullanıldı.
 - **Coroutines**: Asenkron işlemleri yönetmek için Coroutines kullanarak kodun daha okunabilir ve etkili olması sağlandı.
+
+
+## Arayüz
+
+<p align="center">
+  <img src="images/screenshot1.png" width="250" >
+  <img src="images/screenshot2.png" width="255" >
+  <img src="images/screenshot3.png" width="250" >
+ 
+</p>
